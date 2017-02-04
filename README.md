@@ -1,15 +1,16 @@
 L-system
 =========
 
-Implementation of an L-system  (Lindenmayer System) in p5.js (Processing).
-Originally developed by biologist Aristid Lindenmayer to describe the behaviour of plant cells
-and to model the growth of plants and trees.
+Implementation of an L-system  (Lindenmayer System) in p5.js (Processing). 
+Originally developed by biologist Aristid Lindenmayer to describe the behaviour of plant cells and to model the growth of plants and trees.
 
 Alphabet: FX+-[]
+
 Axiom: X
+
 Ruleset:
-		X -> F−[[X]+X]+F[+FX]−X
-		F -> FF
+-	X -> F−[[X]+X]+F[+FX]−X
+-	F -> FF
 
 Rules for drawing:
 -	F: draw line and move forward
