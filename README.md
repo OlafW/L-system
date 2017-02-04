@@ -20,4 +20,4 @@ Rules for drawing:
     ]: move to previous location (pop)
 
 Example output
-![Alt text](img/woeker.png?raw=true)
+![Alt text](img/woeker1.png?raw=true)
