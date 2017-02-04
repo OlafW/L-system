@@ -1,4 +1,5 @@
-L-system (Lindenmayer System)
+#H1 L-system (Lindenmayer System)
+
 Originally developed by biologist Aristid Lindenmayer to describe the behaviour of plant cells 
 and to model the growth of plants and trees.
 
@@ -16,4 +17,5 @@ Rules for drawing:
     [: save current location (push)
     ]: move to previous location (pop)
 
-*/
+Example output 
+![Alt text](img/woeker.png?raw=true "Title")
