@@ -12,12 +12,12 @@ Ruleset:
 		F -> FF
 
 Rules for drawing:
-    F: draw line and move forward
-    X: do nothing
-    +: rotate right
-    -: rotate left
-    [: save current location (push)
-    ]: move to previous location (pop)
+-	F: draw line and move forward
+-	X: do nothing
+-	+: rotate right
+-	-: rotate left
+-	[: save current location (push)
+-	]: move to previous location (pop)
 
 Example output
 ![Alt text](img/woeker1.png?raw=true)
