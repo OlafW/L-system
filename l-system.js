@@ -22,7 +22,7 @@ var alphabet = ["FX+-[]"];
 // var axiom = "X";
 // var ruleSet = [["X", "F−[[X]+X]+F[+FX]−X"], ["F", "FF"]];
 
-var axiom = "F[++F][--F]";
+var axiom = "F[++FF][--FF]";
 var ruleSet = [["F", "FF-[-F+F+F]+[+F-F-F]"]];
 
 
@@ -47,7 +47,7 @@ function display(sentence, len, theta) {
     for (var i = 0; i < sentence.length; i++) {
     	var c = sentence[i];
 
-    	strokeWeight(random(0.5, 9));
+    	strokeWeight(random(0.5, 10));
     	var r = random(50, 255);
         stroke(r, 160, 225-r/2, 200);
 
@@ -73,7 +73,7 @@ function display(sentence, len, theta) {
 }
 
 function setup() {
-	createCanvas(1280, 500);
+	createCanvas(1280, 720);
 	blendMode(OVERLAY);
 	background(17, 21, 25);
 
@@ -82,13 +82,13 @@ function setup() {
 	var numGen = 5;
 	var sentence = axiom;
 	var len = 30;
-	var theta = radians(30);
+	var theta = radians(35);
 
     for (var i = 0; i < numGen; i++) {
         sentence = gen(sentence);
 
         push();
-        rotate(radians(random(-5, 5)));
+        rotate(radians(random(-15, 15)));
         display(sentence, len, theta);
         pop();
 
