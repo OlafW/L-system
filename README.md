@@ -1,7 +1,7 @@
-L-system
+Woeker
 =========
 
-Implementation of an L-system  (Lindenmayer System) in p5.js (Processing).
+Woeker is a series of experiments with L-systems (Lindenmayer Systems) in p5.js (Processing).
 Originally developed by biologist Aristid Lindenmayer to describe the behaviour of plant cells and to model the growth of plants and trees.
 
 Alphabet: FX+-[]
