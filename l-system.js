@@ -18,22 +18,20 @@ Rules for drawing:
     ]: move to previous location (pop)
 */
 
-"use strict";
+var alphabet = ["FX+-[]"];
+// var axiom = "X";
+// var ruleSet = [["X", "F−[[X]+X]+F[+FX]−X"], ["F", "FF"]];
 
-const alphabet = ["FX+-[]"];
-// const axiom = "X";
-// const ruleSet = [["X", "F−[[X]+X]+F[+FX]−X"], ["F", "FF"]];
-
-const axiom = "F[++F][--F]";
-const ruleSet = [["F", "FF-[-F+F+F]+[+F-F-F]"]];
+var axiom = "F[++F][--F]";
+var ruleSet = [["F", "FF-[-F+F+F]+[+F-F-F]"]];
 
 
 function gen(sentence) {
-    let nextSentence = "";
+    var nextSentence = "";
 
-    for (let i = 0; i < sentence.length; i++) {
-        let found = false;
-    	for (let j = 0; j < ruleSet.length; j++) {
+    for (var i = 0; i < sentence.length; i++) {
+        var found = false;
+    	for (var j = 0; j < ruleSet.length; j++) {
 		    if (sentence[i] == ruleSet[j][0]) {
 		        nextSentence += ruleSet[j][1];
 		        found = true;
@@ -46,12 +44,12 @@ function gen(sentence) {
 }
 
 function display(sentence, len, theta) {
-    for (let i = 0; i < sentence.length; i++) {
-    	let c = sentence[i];
+    for (var i = 0; i < sentence.length; i++) {
+    	var c = sentence[i];
 
     	strokeWeight(random(0.5, 9));
-    	let r = random(50, 255);
-		stroke(r, 160, 225-r/2, 200);
+    	var r = random(50, 255);
+        stroke(r, 160, 225-r/2, 200);
 
     	switch(c) {
     		case 'F':
@@ -81,12 +79,12 @@ function setup() {
 
 	translate(-250, height/2);
 
-	const numGen = 5;
-	let sentence = axiom;
-	let len = 30;
-	let theta = radians(30);
+	var numGen = 5;
+	var sentence = axiom;
+	var len = 30;
+	var theta = radians(30);
 
-    for (let i = 0; i < numGen; i++) {
+    for (var i = 0; i < numGen; i++) {
         sentence = gen(sentence);
 
         push();
