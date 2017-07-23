@@ -85,10 +85,9 @@ function display(sentence) {
 }
 
 function setup() {
-	createCanvas(1280, 800);
-    blendMode(BLEND);
+    createCanvas(1280, 800);
+    blendMode(OVERLAY);
     background(19, 21, 25);
-	blendMode(OVERLAY);
 
     var numGen = 4;
     var sentence = axiom;
