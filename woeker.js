@@ -3,7 +3,8 @@ Visual experiment with L-systems (Lindenmayer System).
 Originally developed by biologist Aristid Lindenmayer to describe the behaviour of plant cells
 and to model the growth of plants and trees.
 
-Example string and ruleset
+Example string and ruleset:
+
 Alphabet: FX+-[]
 Axiom: [+FX][-FX]
 Ruleset:
