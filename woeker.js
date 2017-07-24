@@ -3,11 +3,12 @@ Visual experiment with L-systems (Lindenmayer System).
 Originally developed by biologist Aristid Lindenmayer to describe the behaviour of plant cells
 and to model the growth of plants and trees.
 
+Example string and ruleset
 Alphabet: FX+-[]
-Axiom: X
+Axiom: [+FX][-FX]
 Ruleset:
-		X -> F−[[X]+X]+F[+FX]−X
-		F -> FF
+		X -> FX
+		F -> FF-[-FF+F+F]+[+FF-F-F]
 
 Rules for drawing:
     F: draw line and move forward
@@ -27,7 +28,7 @@ function gen(sentence) {
 
     for (var i = 0; i < sentence.length; ++i) {
         found = false;
-    	for (var j = 0; j < ruleSet.length; j++) {
+    	for (var j = 0; j < ruleSet.length; ++j) {
 		    if (sentence[i] == ruleSet[j][0]) {
 		        nextSentence += ruleSet[j][1];
 		        found = true;
@@ -66,7 +67,7 @@ function display(sentence) {
     			break;
 
     		case '+':
-    			rotate(theta + modulation);
+                rotate(theta + modulation);
     			break;
 
     		case '-':
